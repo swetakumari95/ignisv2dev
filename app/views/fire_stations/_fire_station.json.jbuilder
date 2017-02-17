@@ -1,0 +1,2 @@
+json.extract! fire_station, :id, :name, :sanction_number, :address, :longitude, :latitude, :phone_number, :land_area, :fs_class, :establishment_date, :establishment_cost, :sanctioned_strength, :actual_strength, :taluk_bit, :status, :created_at, :updated_at
+json.url fire_station_url(fire_station, format: :json)

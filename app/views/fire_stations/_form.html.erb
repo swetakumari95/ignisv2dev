@@ -1,0 +1,87 @@
+<%= form_for(fire_station) do |f| %>
+  <% if fire_station.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(fire_station.errors.count, "error") %> prohibited this fire_station from being saved:</h2>
+
+      <ul>
+      <% fire_station.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sanction_number %>
+    <%= f.text_field :sanction_number %>
+  </div>
+
+  <div class="field">
+    <%= f.label :address %>
+    <%= f.text_field :address %>
+  </div>
+
+  <div class="field">
+    <%= f.label :longitude %>
+    <%= f.text_field :longitude %>
+  </div>
+
+  <div class="field">
+    <%= f.label :latitude %>
+    <%= f.text_field :latitude %>
+  </div>
+
+  <div class="field">
+    <%= f.label :phone_number %>
+    <%= f.number_field :phone_number %>
+  </div>
+
+  <div class="field">
+    <%= f.label :land_area %>
+    <%= f.text_field :land_area %>
+  </div>
+
+  <div class="field">
+    <%= f.label :fs_class %>
+    <%= f.text_field :fs_class %>
+  </div>
+
+  <div class="field">
+    <%= f.label :establishment_date %>
+    <%= f.date_select :establishment_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :establishment_cost %>
+    <%= f.text_field :establishment_cost %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sanctioned_strength %>
+    <%= f.number_field :sanctioned_strength %>
+  </div>
+
+  <div class="field">
+    <%= f.label :actual_strength %>
+    <%= f.number_field :actual_strength %>
+  </div>
+
+  <div class="field">
+    <%= f.label :taluk_bit %>
+    <%= f.text_field :taluk_bit %>
+  </div>
+
+  <div class="field">
+    <%= f.label :status %>
+    <%= f.text_field :status %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

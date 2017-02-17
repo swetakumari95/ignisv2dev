@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @fire_station.name %>
+</p>
+
+<p>
+  <strong>Sanction number:</strong>
+  <%= @fire_station.sanction_number %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @fire_station.address %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @fire_station.longitude %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @fire_station.latitude %>
+</p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @fire_station.phone_number %>
+</p>
+
+<p>
+  <strong>Land area:</strong>
+  <%= @fire_station.land_area %>
+</p>
+
+<p>
+  <strong>Fs class:</strong>
+  <%= @fire_station.fs_class %>
+</p>
+
+<p>
+  <strong>Establishment date:</strong>
+  <%= @fire_station.establishment_date %>
+</p>
+
+<p>
+  <strong>Establishment cost:</strong>
+  <%= @fire_station.establishment_cost %>
+</p>
+
+<p>
+  <strong>Sanctioned strength:</strong>
+  <%= @fire_station.sanctioned_strength %>
+</p>
+
+<p>
+  <strong>Actual strength:</strong>
+  <%= @fire_station.actual_strength %>
+</p>
+
+<p>
+  <strong>Taluk bit:</strong>
+  <%= @fire_station.taluk_bit %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @fire_station.status %>
+</p>
+
+<%= link_to 'Edit', edit_fire_station_path(@fire_station) %> |
+<%= link_to 'Back', fire_stations_path %>

@@ -1,0 +1,2 @@
+class FireStation < ApplicationRecord
+end

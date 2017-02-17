@@ -1,0 +1,2 @@
+module FireStationsHelper
+end

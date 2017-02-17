@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Fire Stations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Sanction number</th>
+      <th>Address</th>
+      <th>Longitude</th>
+      <th>Latitude</th>
+      <th>Phone number</th>
+      <th>Land area</th>
+      <th>Fs class</th>
+      <th>Establishment date</th>
+      <th>Establishment cost</th>
+      <th>Sanctioned strength</th>
+      <th>Actual strength</th>
+      <th>Taluk bit</th>
+      <th>Status</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fire_stations.each do |fire_station| %>
+      <tr>
+        <td><%= fire_station.name %></td>
+        <td><%= fire_station.sanction_number %></td>
+        <td><%= fire_station.address %></td>
+        <td><%= fire_station.longitude %></td>
+        <td><%= fire_station.latitude %></td>
+        <td><%= fire_station.phone_number %></td>
+        <td><%= fire_station.land_area %></td>
+        <td><%= fire_station.fs_class %></td>
+        <td><%= fire_station.establishment_date %></td>
+        <td><%= fire_station.establishment_cost %></td>
+        <td><%= fire_station.sanctioned_strength %></td>
+        <td><%= fire_station.actual_strength %></td>
+        <td><%= fire_station.taluk_bit %></td>
+        <td><%= fire_station.status %></td>
+        <td><%= link_to 'Show', fire_station %></td>
+        <td><%= link_to 'Edit', edit_fire_station_path(fire_station) %></td>
+        <td><%= link_to 'Destroy', fire_station, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fire Station', new_fire_station_path %>
