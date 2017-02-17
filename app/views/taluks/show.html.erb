@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @taluk.name %>
+</p>
+
+<p>
+  <strong>District:</strong>
+  <%= @taluk.district %>
+</p>
+
+<%= link_to 'Edit', edit_taluk_path(@taluk) %> |
+<%= link_to 'Back', taluks_path %>

@@ -1,0 +1,1 @@
+json.partial! "hoblis/hobli", hobli: @hobli

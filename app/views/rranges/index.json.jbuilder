@@ -1,0 +1,1 @@
+json.array! @rranges, partial: 'rranges/rrange', as: :rrange

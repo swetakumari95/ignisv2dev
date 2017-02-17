@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170217224120) do
+ActiveRecord::Schema.define(version: 20170217235058) do
+
+  create_table "districts", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "rrange_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["rrange_id"], name: "index_districts_on_rrange_id"
+  end
 
   create_table "fire_stations", force: :cascade do |t|
     t.string   "name"
@@ -29,6 +37,30 @@ ActiveRecord::Schema.define(version: 20170217224120) do
     t.string   "status"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
+  end
+
+  create_table "hoblis", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "taluk_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["taluk_id"], name: "index_hoblis_on_taluk_id"
+  end
+
+  create_table "rranges", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "zone_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["zone_id"], name: "index_rranges_on_zone_id"
+  end
+
+  create_table "taluks", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "district_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["district_id"], name: "index_taluks_on_district_id"
   end
 
   create_table "vehicles", force: :cascade do |t|
@@ -54,6 +86,12 @@ ActiveRecord::Schema.define(version: 20170217224120) do
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
     t.index ["fire_station_id"], name: "index_vehicles_on_fire_station_id"
+  end
+
+  create_table "zones", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

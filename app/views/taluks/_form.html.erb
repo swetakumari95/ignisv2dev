@@ -1,0 +1,27 @@
+<%= form_for(taluk) do |f| %>
+  <% if taluk.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(taluk.errors.count, "error") %> prohibited this taluk from being saved:</h2>
+
+      <ul>
+      <% taluk.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :district_id %>
+    <%= f.text_field :district_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

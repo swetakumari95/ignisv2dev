@@ -1,0 +1,27 @@
+<%= form_for(hobli) do |f| %>
+  <% if hobli.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(hobli.errors.count, "error") %> prohibited this hobli from being saved:</h2>
+
+      <ul>
+      <% hobli.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :taluk_id %>
+    <%= f.text_field :taluk_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

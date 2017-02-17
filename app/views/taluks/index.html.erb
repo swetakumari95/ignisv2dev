@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Taluks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>District</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @taluks.each do |taluk| %>
+      <tr>
+        <td><%= taluk.name %></td>
+        <td><%= taluk.district %></td>
+        <td><%= link_to 'Show', taluk %></td>
+        <td><%= link_to 'Edit', edit_taluk_path(taluk) %></td>
+        <td><%= link_to 'Destroy', taluk, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Taluk', new_taluk_path %>

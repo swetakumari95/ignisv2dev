@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @hobli.name %>
+</p>
+
+<p>
+  <strong>Taluk:</strong>
+  <%= @hobli.taluk %>
+</p>
+
+<%= link_to 'Edit', edit_hobli_path(@hobli) %> |
+<%= link_to 'Back', hoblis_path %>
