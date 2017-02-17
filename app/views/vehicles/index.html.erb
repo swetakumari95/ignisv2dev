@@ -1,0 +1,63 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Vehicles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Registration number</th>
+      <th>Make</th>
+      <th>Model</th>
+      <th>Mfg year</th>
+      <th>Cost</th>
+      <th>Purchase date</th>
+      <th>Chassis number</th>
+      <th>Engine number</th>
+      <th>Fuel tank capacity</th>
+      <th>Fabricator</th>
+      <th>Type</th>
+      <th>Tax card</th>
+      <th>Sanction order no</th>
+      <th>Sanction date</th>
+      <th>Actual mileage</th>
+      <th>Proposed mileage</th>
+      <th>Kilometers run</th>
+      <th>Fuel consumed</th>
+      <th>Fire station</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @vehicles.each do |vehicle| %>
+      <tr>
+        <td><%= vehicle.registration_number %></td>
+        <td><%= vehicle.make %></td>
+        <td><%= vehicle.model %></td>
+        <td><%= vehicle.mfg_year %></td>
+        <td><%= vehicle.cost %></td>
+        <td><%= vehicle.purchase_date %></td>
+        <td><%= vehicle.chassis_number %></td>
+        <td><%= vehicle.engine_number %></td>
+        <td><%= vehicle.fuel_tank_capacity %></td>
+        <td><%= vehicle.fabricator %></td>
+        <td><%= vehicle.type %></td>
+        <td><%= vehicle.tax_card %></td>
+        <td><%= vehicle.sanction_order_no %></td>
+        <td><%= vehicle.sanction_date %></td>
+        <td><%= vehicle.actual_mileage %></td>
+        <td><%= vehicle.proposed_mileage %></td>
+        <td><%= vehicle.kilometers_run %></td>
+        <td><%= vehicle.fuel_consumed %></td>
+        <td><%= vehicle.fire_station %></td>
+        <td><%= link_to 'Show', vehicle %></td>
+        <td><%= link_to 'Edit', edit_vehicle_path(vehicle) %></td>
+        <td><%= link_to 'Destroy', vehicle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Vehicle', new_vehicle_path %>

@@ -1,0 +1,112 @@
+<%= form_for(vehicle) do |f| %>
+  <% if vehicle.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(vehicle.errors.count, "error") %> prohibited this vehicle from being saved:</h2>
+
+      <ul>
+      <% vehicle.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :registration_number %>
+    <%= f.text_field :registration_number %>
+  </div>
+
+  <div class="field">
+    <%= f.label :make %>
+    <%= f.text_field :make %>
+  </div>
+
+  <div class="field">
+    <%= f.label :model %>
+    <%= f.text_field :model %>
+  </div>
+
+  <div class="field">
+    <%= f.label :mfg_year %>
+    <%= f.number_field :mfg_year %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cost %>
+    <%= f.text_field :cost %>
+  </div>
+
+  <div class="field">
+    <%= f.label :purchase_date %>
+    <%= f.date_select :purchase_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :chassis_number %>
+    <%= f.text_field :chassis_number %>
+  </div>
+
+  <div class="field">
+    <%= f.label :engine_number %>
+    <%= f.text_field :engine_number %>
+  </div>
+
+  <div class="field">
+    <%= f.label :fuel_tank_capacity %>
+    <%= f.text_field :fuel_tank_capacity %>
+  </div>
+
+  <div class="field">
+    <%= f.label :fabricator %>
+    <%= f.text_field :fabricator %>
+  </div>
+
+  <div class="field">
+    <%= f.label :type %>
+    <%= f.text_field :type %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tax_card %>
+    <%= f.text_field :tax_card %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sanction_order_no %>
+    <%= f.text_field :sanction_order_no %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sanction_date %>
+    <%= f.date_select :sanction_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :actual_mileage %>
+    <%= f.text_field :actual_mileage %>
+  </div>
+
+  <div class="field">
+    <%= f.label :proposed_mileage %>
+    <%= f.text_field :proposed_mileage %>
+  </div>
+
+  <div class="field">
+    <%= f.label :kilometers_run %>
+    <%= f.text_field :kilometers_run %>
+  </div>
+
+  <div class="field">
+    <%= f.label :fuel_consumed %>
+    <%= f.text_field :fuel_consumed %>
+  </div>
+
+  <div class="field">
+    <%= f.label :fire_station_id %>
+    <%= f.text_field :fire_station_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

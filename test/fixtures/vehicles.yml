@@ -1,0 +1,43 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  registration_number: MyString
+  make: MyString
+  model: MyString
+  mfg_year: 1
+  cost: 9.99
+  purchase_date: 2017-02-18
+  chassis_number: MyString
+  engine_number: MyString
+  fuel_tank_capacity: 9.99
+  fabricator: MyString
+  type: 
+  tax_card: MyString
+  sanction_order_no: MyString
+  sanction_date: 2017-02-18
+  actual_mileage: 9.99
+  proposed_mileage: 9.99
+  kilometers_run: 9.99
+  fuel_consumed: 9.99
+  fire_station: one
+
+two:
+  registration_number: MyString
+  make: MyString
+  model: MyString
+  mfg_year: 1
+  cost: 9.99
+  purchase_date: 2017-02-18
+  chassis_number: MyString
+  engine_number: MyString
+  fuel_tank_capacity: 9.99
+  fabricator: MyString
+  type: 
+  tax_card: MyString
+  sanction_order_no: MyString
+  sanction_date: 2017-02-18
+  actual_mileage: 9.99
+  proposed_mileage: 9.99
+  kilometers_run: 9.99
+  fuel_consumed: 9.99
+  fire_station: two

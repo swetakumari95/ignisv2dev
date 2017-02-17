@@ -13,7 +13,7 @@ class CreateFireStations < ActiveRecord::Migration[5.0]
       t.decimal :establishment_cost
       t.integer :sanctioned_strength
       t.integer :actual_strength
-      t.bit :taluk_bit
+      t.boolean :taluk_bit
       t.string :status
 
       t.timestamps

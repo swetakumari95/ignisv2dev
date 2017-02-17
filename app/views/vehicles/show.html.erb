@@ -1,0 +1,99 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Registration number:</strong>
+  <%= @vehicle.registration_number %>
+</p>
+
+<p>
+  <strong>Make:</strong>
+  <%= @vehicle.make %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @vehicle.model %>
+</p>
+
+<p>
+  <strong>Mfg year:</strong>
+  <%= @vehicle.mfg_year %>
+</p>
+
+<p>
+  <strong>Cost:</strong>
+  <%= @vehicle.cost %>
+</p>
+
+<p>
+  <strong>Purchase date:</strong>
+  <%= @vehicle.purchase_date %>
+</p>
+
+<p>
+  <strong>Chassis number:</strong>
+  <%= @vehicle.chassis_number %>
+</p>
+
+<p>
+  <strong>Engine number:</strong>
+  <%= @vehicle.engine_number %>
+</p>
+
+<p>
+  <strong>Fuel tank capacity:</strong>
+  <%= @vehicle.fuel_tank_capacity %>
+</p>
+
+<p>
+  <strong>Fabricator:</strong>
+  <%= @vehicle.fabricator %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @vehicle.type %>
+</p>
+
+<p>
+  <strong>Tax card:</strong>
+  <%= @vehicle.tax_card %>
+</p>
+
+<p>
+  <strong>Sanction order no:</strong>
+  <%= @vehicle.sanction_order_no %>
+</p>
+
+<p>
+  <strong>Sanction date:</strong>
+  <%= @vehicle.sanction_date %>
+</p>
+
+<p>
+  <strong>Actual mileage:</strong>
+  <%= @vehicle.actual_mileage %>
+</p>
+
+<p>
+  <strong>Proposed mileage:</strong>
+  <%= @vehicle.proposed_mileage %>
+</p>
+
+<p>
+  <strong>Kilometers run:</strong>
+  <%= @vehicle.kilometers_run %>
+</p>
+
+<p>
+  <strong>Fuel consumed:</strong>
+  <%= @vehicle.fuel_consumed %>
+</p>
+
+<p>
+  <strong>Fire station:</strong>
+  <%= @vehicle.fire_station %>
+</p>
+
+<%= link_to 'Edit', edit_vehicle_path(@vehicle) %> |
+<%= link_to 'Back', vehicles_path %>
